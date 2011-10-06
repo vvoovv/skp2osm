@@ -1,0 +1,1 @@
+@@osmRuleFileName = File.dirname(__FILE__) + "/osm.oxr"

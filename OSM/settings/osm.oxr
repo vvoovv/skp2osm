@@ -1,0 +1,27 @@
+
+
+setup do
+
+end
+
+
+ways do
+    if highway=="primary"
+		OsmImport.solidLine(self, 12.m, 0x9a98ec)
+	elsif highway=="secondary"
+		OsmImport.solidLine(self, 8.m, 0xa5d7fe)
+	elsif highway=="tertiary"
+		OsmImport.solidLine(self, 6.m, 0xb3ffff)
+	elsif highway=="residential" or highway=="unclassified"
+		OsmImport.solidLine(self, 5.m, 0xffffff)
+	elsif highway=="service"
+		OsmImport.solidLine(self, 4.m, 0xffffff)
+	elsif highway=="footway"
+		OsmImport.solidLine(self, 4.m, 0x7aa0ff)
+	elsif highway=="path"
+		OsmImport.solidLine(self, 2.m, 0x000000)
+	elsif building=="yes" or building=="true"
+		OsmImport.face(self, 0xa9a9bc)
+    end
+end
+
