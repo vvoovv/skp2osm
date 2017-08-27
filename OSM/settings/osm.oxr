@@ -20,7 +20,7 @@ ways do
 		OsmImport.solidLine(self, 4.m, 0x7aa0ff)
 	elsif highway=="path"
 		OsmImport.solidLine(self, 2.m, 0x000000)
-	elsif building=="yes" or building=="true"
+	elsif building && !building.empty?
 		if height
 			OsmImport.volume(self, height, 0xa5d7fe)
 		else
