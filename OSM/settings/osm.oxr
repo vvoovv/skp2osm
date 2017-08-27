@@ -20,8 +20,14 @@ ways do
 		OsmImport.solidLine(self, 4.m, 0x7aa0ff)
 	elsif highway=="path"
 		OsmImport.solidLine(self, 2.m, 0x000000)
-	elsif building=="yes" or building=="true"
-		OsmImport.face(self, 0xa9a9bc)
+	elsif building && !building.empty?
+		if height
+			OsmImport.volume(self, height, 0xa5d7fe)
+		else
+			OsmImport.face(self, 0xa9a9bc)
+		end
+	elsif natural=="water"
+		OsmImport.face(self, 0xe0d3a9)
     end
 end
 
