@@ -26,6 +26,8 @@ ways do
 		else
 			OsmImport.face(self, 0xa9a9bc)
 		end
+	elsif natural=="water"
+		OsmImport.face(self, 0xe0d3a9)
     end
 end
 
