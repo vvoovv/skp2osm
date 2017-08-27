@@ -21,7 +21,11 @@ ways do
 	elsif highway=="path"
 		OsmImport.solidLine(self, 2.m, 0x000000)
 	elsif building=="yes" or building=="true"
-		OsmImport.face(self, 0xa9a9bc)
+		if height
+			OsmImport.volume(self, height, 0xa5d7fe)
+		else
+			OsmImport.face(self, 0xa9a9bc)
+		end
     end
 end
 
